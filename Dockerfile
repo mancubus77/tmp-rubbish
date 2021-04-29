@@ -4,7 +4,7 @@ ENV STUNNEL_VERSION 5.59
 
 # RUN yum update -y 
 RUN yum install wget tar openssl-devel make -y \
-    && wget -O - ftp://ftp.stunnel.org/stunnel/archive/5.x/stunnel-$STUNNEL_VERSION.tar.gz | tar -C /usr/local/src -zxv
+    && wget -O - ftp://ftp.stunnel.org/stunnel/archive/5.x/stunnel-$STUNNEL_VERSION.tar.gz | tar -C /usr/local/src -zxv \
     && mkdir -p /stunnel
 VOLUME ["/stunnel"]
 
