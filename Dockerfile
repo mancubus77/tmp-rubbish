@@ -1,5 +1,5 @@
 FROM registry.redhat.io/rhscl/devtoolset-10-toolchain-rhel7
-
+USER root
 ENV STUNNEL_VERSION 5.59
 
 RUN yum update \
