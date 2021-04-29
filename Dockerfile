@@ -10,7 +10,7 @@ RUN mkdir -p /stunnel
 VOLUME ["/stunnel"]
 
 # Build stunnel
-RUN cd /usr/local/src/stunnel-$STUNNEL_VERSION && ./configure && make && make install
+RUN cd /usr/local/src/stunnel-$STUNNEL_VERSION && ./configure && make --disable-dependency-tracking && make install
 
 EXPOSE 443
 
